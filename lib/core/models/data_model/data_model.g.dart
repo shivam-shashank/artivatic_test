@@ -7,9 +7,9 @@ part of 'data_model.dart';
 // **************************************************************************
 
 _$_DataModel _$$_DataModelFromJson(Map<String, dynamic> json) => _$_DataModel(
-      title: json['title'] as String? ?? '',
+      title: json['title'] as String? ?? 'No Title',
       rows: (json['rows'] as List<dynamic>?)
-              ?.map((e) => Row.fromJson(e as Map<String, dynamic>))
+              ?.map((e) => Rows.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
     );
@@ -20,13 +20,13 @@ Map<String, dynamic> _$$_DataModelToJson(_$_DataModel instance) =>
       'rows': instance.rows,
     };
 
-_$_Row _$$_RowFromJson(Map<String, dynamic> json) => _$_Row(
-      title: json['title'] as String? ?? '',
-      description: json['description'] as String? ?? '',
+_$_Rows _$$_RowsFromJson(Map<String, dynamic> json) => _$_Rows(
+      title: json['title'] as String? ?? 'No Title',
+      description: json['description'] as String? ?? 'No Description',
       imageHref: json['imageHref'] as String? ?? '',
     );
 
-Map<String, dynamic> _$$_RowToJson(_$_Row instance) => <String, dynamic>{
+Map<String, dynamic> _$$_RowsToJson(_$_Rows instance) => <String, dynamic>{
       'title': instance.title,
       'description': instance.description,
       'imageHref': instance.imageHref,

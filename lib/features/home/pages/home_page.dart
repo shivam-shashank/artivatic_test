@@ -1,4 +1,5 @@
 import 'package:artivatic_test/features/home/bloc/home_bloc.dart';
+import 'package:artivatic_test/features/home/widgets/home_page_success.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -26,18 +27,7 @@ class HomePage extends StatelessWidget {
           );
         }
         if (state is HomeLoadedState) {
-          return Scaffold(
-            appBar: AppBar(
-              title: Text(state.dataModelResult.title),
-              centerTitle: true,
-            ),
-            body: ListView.builder(
-              itemCount: state.dataModelResult.rows.length,
-              itemBuilder: (context, index) {
-                return const Card();
-              },
-            ),
-          );
+          return HomePageSuccess(dataModelResult: state.dataModelResult);
         }
         if (state is HomeErrorState) {
           return Scaffold(

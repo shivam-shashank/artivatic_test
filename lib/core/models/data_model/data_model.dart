@@ -16,8 +16,8 @@ String dataModelToJson(DataModel data) => json.encode(data.toJson());
 @freezed
 abstract class DataModel with _$DataModel {
   const factory DataModel({
-    @Default('') String title,
-    @Default([]) List<Row> rows,
+    @Default('No Title') String title,
+    @Default([]) List<Rows> rows,
   }) = _DataModel;
 
   factory DataModel.fromJson(Map<String, dynamic> json) =>
@@ -25,12 +25,12 @@ abstract class DataModel with _$DataModel {
 }
 
 @freezed
-abstract class Row with _$Row {
-  const factory Row({
-    @Default('') String title,
-    @Default('') String description,
+abstract class Rows with _$Rows {
+  const factory Rows({
+    @Default('No Title') String title,
+    @Default('No Description') String description,
     @Default('') String imageHref,
-  }) = _Row;
+  }) = _Rows;
 
-  factory Row.fromJson(Map<String, dynamic> json) => _$RowFromJson(json);
+  factory Rows.fromJson(Map<String, dynamic> json) => _$RowsFromJson(json);
 }

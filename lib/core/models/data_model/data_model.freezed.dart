@@ -21,7 +21,7 @@ DataModel _$DataModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$DataModel {
   String get title => throw _privateConstructorUsedError;
-  List<Row> get rows => throw _privateConstructorUsedError;
+  List<Rows> get rows => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -33,7 +33,7 @@ mixin _$DataModel {
 abstract class $DataModelCopyWith<$Res> {
   factory $DataModelCopyWith(DataModel value, $Res Function(DataModel) then) =
       _$DataModelCopyWithImpl<$Res>;
-  $Res call({String title, List<Row> rows});
+  $Res call({String title, List<Rows> rows});
 }
 
 /// @nodoc
@@ -57,7 +57,7 @@ class _$DataModelCopyWithImpl<$Res> implements $DataModelCopyWith<$Res> {
       rows: rows == freezed
           ? _value.rows
           : rows // ignore: cast_nullable_to_non_nullable
-              as List<Row>,
+              as List<Rows>,
     ));
   }
 }
@@ -68,7 +68,7 @@ abstract class _$DataModelCopyWith<$Res> implements $DataModelCopyWith<$Res> {
           _DataModel value, $Res Function(_DataModel) then) =
       __$DataModelCopyWithImpl<$Res>;
   @override
-  $Res call({String title, List<Row> rows});
+  $Res call({String title, List<Rows> rows});
 }
 
 /// @nodoc
@@ -93,7 +93,7 @@ class __$DataModelCopyWithImpl<$Res> extends _$DataModelCopyWithImpl<$Res>
       rows: rows == freezed
           ? _value.rows
           : rows // ignore: cast_nullable_to_non_nullable
-              as List<Row>,
+              as List<Rows>,
     ));
   }
 }
@@ -101,7 +101,8 @@ class __$DataModelCopyWithImpl<$Res> extends _$DataModelCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DataModel implements _DataModel {
-  const _$_DataModel({this.title = '', final List<Row> rows = const []})
+  const _$_DataModel(
+      {this.title = 'No Title', final List<Rows> rows = const []})
       : _rows = rows;
 
   factory _$_DataModel.fromJson(Map<String, dynamic> json) =>
@@ -110,10 +111,10 @@ class _$_DataModel implements _DataModel {
   @override
   @JsonKey()
   final String title;
-  final List<Row> _rows;
+  final List<Rows> _rows;
   @override
   @JsonKey()
-  List<Row> get rows {
+  List<Rows> get rows {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_rows);
   }
@@ -151,7 +152,7 @@ class _$_DataModel implements _DataModel {
 }
 
 abstract class _DataModel implements DataModel {
-  const factory _DataModel({final String title, final List<Row> rows}) =
+  const factory _DataModel({final String title, final List<Rows> rows}) =
       _$_DataModel;
 
   factory _DataModel.fromJson(Map<String, dynamic> json) =
@@ -160,42 +161,42 @@ abstract class _DataModel implements DataModel {
   @override
   String get title => throw _privateConstructorUsedError;
   @override
-  List<Row> get rows => throw _privateConstructorUsedError;
+  List<Rows> get rows => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$DataModelCopyWith<_DataModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-Row _$RowFromJson(Map<String, dynamic> json) {
-  return _Row.fromJson(json);
+Rows _$RowsFromJson(Map<String, dynamic> json) {
+  return _Rows.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Row {
+mixin _$Rows {
   String get title => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
   String get imageHref => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RowCopyWith<Row> get copyWith => throw _privateConstructorUsedError;
+  $RowsCopyWith<Rows> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RowCopyWith<$Res> {
-  factory $RowCopyWith(Row value, $Res Function(Row) then) =
-      _$RowCopyWithImpl<$Res>;
+abstract class $RowsCopyWith<$Res> {
+  factory $RowsCopyWith(Rows value, $Res Function(Rows) then) =
+      _$RowsCopyWithImpl<$Res>;
   $Res call({String title, String description, String imageHref});
 }
 
 /// @nodoc
-class _$RowCopyWithImpl<$Res> implements $RowCopyWith<$Res> {
-  _$RowCopyWithImpl(this._value, this._then);
+class _$RowsCopyWithImpl<$Res> implements $RowsCopyWith<$Res> {
+  _$RowsCopyWithImpl(this._value, this._then);
 
-  final Row _value;
+  final Rows _value;
   // ignore: unused_field
-  final $Res Function(Row) _then;
+  final $Res Function(Rows) _then;
 
   @override
   $Res call({
@@ -221,21 +222,21 @@ class _$RowCopyWithImpl<$Res> implements $RowCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$RowCopyWith<$Res> implements $RowCopyWith<$Res> {
-  factory _$RowCopyWith(_Row value, $Res Function(_Row) then) =
-      __$RowCopyWithImpl<$Res>;
+abstract class _$RowsCopyWith<$Res> implements $RowsCopyWith<$Res> {
+  factory _$RowsCopyWith(_Rows value, $Res Function(_Rows) then) =
+      __$RowsCopyWithImpl<$Res>;
   @override
   $Res call({String title, String description, String imageHref});
 }
 
 /// @nodoc
-class __$RowCopyWithImpl<$Res> extends _$RowCopyWithImpl<$Res>
-    implements _$RowCopyWith<$Res> {
-  __$RowCopyWithImpl(_Row _value, $Res Function(_Row) _then)
-      : super(_value, (v) => _then(v as _Row));
+class __$RowsCopyWithImpl<$Res> extends _$RowsCopyWithImpl<$Res>
+    implements _$RowsCopyWith<$Res> {
+  __$RowsCopyWithImpl(_Rows _value, $Res Function(_Rows) _then)
+      : super(_value, (v) => _then(v as _Rows));
 
   @override
-  _Row get _value => super._value as _Row;
+  _Rows get _value => super._value as _Rows;
 
   @override
   $Res call({
@@ -243,7 +244,7 @@ class __$RowCopyWithImpl<$Res> extends _$RowCopyWithImpl<$Res>
     Object? description = freezed,
     Object? imageHref = freezed,
   }) {
-    return _then(_Row(
+    return _then(_Rows(
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -262,10 +263,13 @@ class __$RowCopyWithImpl<$Res> extends _$RowCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Row implements _Row {
-  const _$_Row({this.title = '', this.description = '', this.imageHref = ''});
+class _$_Rows implements _Rows {
+  const _$_Rows(
+      {this.title = 'No Title',
+      this.description = 'No Description',
+      this.imageHref = ''});
 
-  factory _$_Row.fromJson(Map<String, dynamic> json) => _$$_RowFromJson(json);
+  factory _$_Rows.fromJson(Map<String, dynamic> json) => _$$_RowsFromJson(json);
 
   @override
   @JsonKey()
@@ -279,14 +283,14 @@ class _$_Row implements _Row {
 
   @override
   String toString() {
-    return 'Row(title: $title, description: $description, imageHref: $imageHref)';
+    return 'Rows(title: $title, description: $description, imageHref: $imageHref)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Row &&
+            other is _Rows &&
             const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
@@ -303,22 +307,22 @@ class _$_Row implements _Row {
 
   @JsonKey(ignore: true)
   @override
-  _$RowCopyWith<_Row> get copyWith =>
-      __$RowCopyWithImpl<_Row>(this, _$identity);
+  _$RowsCopyWith<_Rows> get copyWith =>
+      __$RowsCopyWithImpl<_Rows>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RowToJson(this);
+    return _$$_RowsToJson(this);
   }
 }
 
-abstract class _Row implements Row {
-  const factory _Row(
+abstract class _Rows implements Rows {
+  const factory _Rows(
       {final String title,
       final String description,
-      final String imageHref}) = _$_Row;
+      final String imageHref}) = _$_Rows;
 
-  factory _Row.fromJson(Map<String, dynamic> json) = _$_Row.fromJson;
+  factory _Rows.fromJson(Map<String, dynamic> json) = _$_Rows.fromJson;
 
   @override
   String get title => throw _privateConstructorUsedError;
@@ -328,5 +332,5 @@ abstract class _Row implements Row {
   String get imageHref => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$RowCopyWith<_Row> get copyWith => throw _privateConstructorUsedError;
+  _$RowsCopyWith<_Rows> get copyWith => throw _privateConstructorUsedError;
 }
