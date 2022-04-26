@@ -36,6 +36,7 @@ class _HomePageSuccessState extends State<HomePageSuccess> {
           physics: const BouncingScrollPhysics(),
           children: [
             CustomTextField(
+              key: const Key("searchField"),
               hintText: "Search...",
               textEditingController: _searchTEC,
               validator: (val) {
