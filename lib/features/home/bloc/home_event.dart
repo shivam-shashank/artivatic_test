@@ -8,3 +8,9 @@ abstract class HomeEvent extends Equatable {
 }
 
 class LoadHomeDataEvent extends HomeEvent {}
+
+// class SearchHomeDataEvent extends HomeEvent {
+//   final DataModel dataModelResult;
+//
+//   const SearchHomeDataEvent({required this.dataModelResult});
+// }

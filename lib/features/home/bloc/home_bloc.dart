@@ -17,7 +17,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           try {
             DataModel _dataModelResult = await homeRepository.getHomeData();
             emit(
-              HomeLoadedState(dataModelResult: _dataModelResult),
+              HomeLoadedState(
+                  searchQuery: "", dataModelResult: _dataModelResult),
             );
           } catch (e) {
             emit(
@@ -25,6 +26,30 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
             );
           }
         }
+
+        // if (event is SearchHomeDataEvent) {
+        //   List<Rows> _searchedRows = [];
+        //
+        //   if (event.searchQuery != "") {
+        //     for (var element in event.dataModelResult.rows) {
+        //       if (element.title.contains(event.searchQuery)) {
+        //         _searchedRows.add(element);
+        //       }
+        //     }
+        //   }
+        //
+        //   emit(
+        //     HomeLoadedState(
+        //       searchQuery: event.searchQuery,
+        //       dataModelResult: event.searchQuery == ""
+        //           ? event.dataModelResult
+        //           : DataModel(
+        //               title: event.dataModelResult.title,
+        //               rows: _searchedRows,
+        //             ),
+        //     ),
+        //   );
+        // }
       },
     );
   }
