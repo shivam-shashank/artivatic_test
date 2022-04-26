@@ -1,3 +1,4 @@
+import 'package:artivatic_test/core/repository/home_repository.dart';
 import 'package:artivatic_test/features/home/bloc/home_bloc.dart';
 import 'package:artivatic_test/features/home/pages/home_page.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,7 @@ void main() {
     MultiBlocProvider(
       providers: [
         BlocProvider.value(
-          value: HomeBloc(),
+          value: HomeBloc(HomeRepository()),
         ),
       ],
       child: const MyApp(),
